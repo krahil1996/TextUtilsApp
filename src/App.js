@@ -10,7 +10,7 @@ import TextForm from './components/TextForm';
 function App() {
   return (
     <>
-      <Navbar title="TextUtils" aboutText="About" />
+      <Navbar />
       <div className="container-xl">
         <TextForm heading="Enter the text to analyze below" />
       </div>

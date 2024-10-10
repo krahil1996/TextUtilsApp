@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/image.png'
+import logo from '../assets/logo.png'
 import PropTypes from 'prop-types'
 
 
@@ -35,4 +35,8 @@ export default function Navbar(props) {
 Navbar.propTypes = {
     title: PropTypes.string.isRequired,
     aboutText: PropTypes.string.isRequired
+}
+Navbar.defaultProps = {
+    title: 'Set Tile here',
+    aboutText: 'Set about'
 }
