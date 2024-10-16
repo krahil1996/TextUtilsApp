@@ -62,24 +62,24 @@ export default function TextForm(props) {
             <div className="container">
                 <h2>Your text summary</h2>
 
-                <div className='d-flex flex-wrap gap-2 flex-row align-items-center justify-content-evenly w-50 text-light bg-danger rounded-1 p-1  mb-1'>
-                    <div className='p-1  '>
-                        <span className='badge bg-dark rounded-circle text-center'>{words}</span><p className='px-1 d-inline'>Words</p>
+                <div className='d-flex flex-wrap gap-2 flex-row shadow-lg align-items-center justify-content-evenly text-light w-50 bg-danger rounded-1 p-1 mb-1'>
+                    <div className='p-1   '>
+                        <span className='p-2 badge bg-dark rounded-circle text-center'>{words}</span><p className='px-1 d-inline'>Words</p>
                     </div>
-                    <span className='border-2 border-end border-light border-opacity-75 text-danger'>{"."}</span>
+                    <span className='border-2 border-end border-secondary border-opacity-50 text-danger'>{"."}</span>
                     <div className='p-1 '>
-                        <span className='badge bg-dark rounded-circle text-center '>{text.length}</span><p className='px-1 d-inline'>Characters</p>
+                        <span className='p-2 badge bg-dark rounded-circle text-center '>{text.length}</span><p className='px-1 d-inline'>Characters</p>
                     </div>
-                    <span className='border-2 border-end border-light text-danger  border-opacity-75 text-danger'>{"."}</span>
+                    <span className='border-2 border-end border-secondary border-opacity-50 text-danger'>{"."}</span>
                     <div className='p-1 '>
-                        <span className='badge bg-dark rounded-circle text-center '>{lines}</span><p className='px-1 d-inline'>Characters</p>
+                        <span className='p-2 badge bg-dark rounded-circle text-center '>{lines}</span><p className='px-1 d-inline'>Characters</p>
                     </div>
 
                 </div>
 
                 <p>{text.split(" ").length * 0.008} Minutes read</p>
                 <h3>Preview</h3>
-                <p className='text-wrap'>{text}</p>
+                <p className='shadow-lg text-wrap text-secondary p-2 border'>{text}</p>
             </div>
         </>
 
