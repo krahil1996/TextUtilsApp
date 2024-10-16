@@ -72,7 +72,7 @@ export default function TextForm(props) {
                     </div>
                     <span className='border-2 border-end border-secondary border-opacity-50 text-danger'>{"."}</span>
                     <div className='p-1 '>
-                        <span className='p-2 badge bg-dark rounded-circle text-center '>{lines}</span><p className='px-1 d-inline'>Characters</p>
+                        <span className='p-2 badge bg-dark rounded-circle text-center '>{lines}</span><p className='px-1 d-inline'>Lines</p>
                     </div>
 
                 </div>
