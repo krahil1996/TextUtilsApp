@@ -11,13 +11,14 @@ export default function Navbar(props) {
                     <img src={logo} alt={props.title} width="32" height="32" /> <b>{props.title}</b>
                 </a>
 
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link text-light" aria-current="page" href="/">Home</a>
+                            <a className="nav-link text-light hover:text-white" aria-current="page" href="/">Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-light" href="/">{props.aboutText}</a>
@@ -27,6 +28,7 @@ export default function Navbar(props) {
                         <input className="form-control me-1" type="search" placeholder="Search" aria-label="Search" />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form> */}
+
                 </div>
             </div>
         </nav>

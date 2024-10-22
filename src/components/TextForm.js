@@ -21,7 +21,13 @@ export default function TextForm(props) {
 
     }
     const handlesenClick = () => {
-
+        function toTitleCase(str) {
+            return str.replace(
+                /\w\S*/g,
+                text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+            );
+        }
+        setText(toTitleCase(text));
 
     }
     const handleOnChange = (e) => {
@@ -51,7 +57,7 @@ export default function TextForm(props) {
                     </textarea>
                     <button onClick={handleUpClick} className="btn btn-primary m-2">Convert to Uppercase</button>
                     <button onClick={handleloClick} className="btn btn-primary m-2">Convert to Lowercase</button>
-                    <button onClick={handlesenClick} className="btn btn-primary m-2">Convert to Sentence Case</button>
+                    <button onClick={handlesenClick} className="btn btn-primary m-2">Convert to Title Case</button>
                 </div>
 
                 {/* <button className="btn btn-primary mx-1">Convert to Lowercase</button>
@@ -77,7 +83,7 @@ export default function TextForm(props) {
 
                 </div>
 
-                <p>{text.split(" ").length * 0.008} Minutes read</p>
+                <p className='d-flex flex-wrap flex-row bg-info w-50 p-2 rounded-1 shadow-lg align-items-center '>{text.split(" ").length * 0.008} Minutes to read</p>
                 <h3>Preview</h3>
                 <p className='shadow-lg text-wrap text-secondary p-2 border'>{text}</p>
             </div>
