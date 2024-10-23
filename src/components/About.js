@@ -14,7 +14,8 @@ export default function About(props) {
         if (myStyle.color === 'black') {
             setMyStyle({
                 color: 'white',
-                backgroundColor: '#212529'
+                backgroundColor: '#212529',
+
             })
             setbtnText('Enable Light Mode')
             setbtnclass('btn btn-light my-2')
@@ -30,16 +31,17 @@ export default function About(props) {
     }
     return (
         <>
-            <div className="container" style={myStyle}>
+            <div className="container rounded-1 pb-3 mb-1" style={myStyle}>
                 <div className="d-flex flex-row justify-content-between align-items-center p-1">
                     <h2 className="py-2">{props.about}</h2>
                     <button onClick={toggleStyle} className={btnclass}>
                         <span style={{ paddingRight: '5px' }} className="bi-moon "></span>{btnText}</button>
                 </div>
+
                 <div className="accordion" id="accordionExample" >
                     <div className="accordion-item" style={myStyle} >
                         <h2 className="accordion-header" id="headingOne">
-                            <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Accordion Item #1
                             </button>
                         </h2>

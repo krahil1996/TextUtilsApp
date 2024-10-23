@@ -37,17 +37,22 @@ export default function TextForm(props) {
         let newText = "";
         setText(newText)
     }
-    let words = text.trimStart(" ").split(" ").length;
-    let lines = text.split("\r\n|\r|\n").length;
-    console.log(words);
+    let words = text.trimStart(" ").split(" ").length - 1;
+    const countlines = (text) => {
+        return text.split(/\r\n|\r|\n/).length - 1;
+    }
+    let lines = countlines(text);
+    console.log(lines);
     return (
         <>
             <div>
                 <div className="container">
-                    <h1 className='d-inline-block my-2'>{props.heading}</h1>
-                    <button
-                        onClick={resetText}
-                        className=" mt-3 btn btn-warning float-lg-end my-2">Reset Text</button>
+                    <div className='d-flex flex-row flex-wrap gap-2 justify-content-between align-items-center'>
+                        <h1 className='my-2'>{props.heading}</h1>
+                        <button
+                            onClick={resetText}
+                            className="btn btn-warning my-2 ">Reset Text</button>
+                    </div>
                     <textarea
                         placeholder='Enter Text here.'
                         className="form-control mb-2 text-wrap" style={{ resize: 'initial' }} id="myBox" rows="14"
@@ -65,21 +70,24 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-1">Convert to Uppercase</button>
             <button className="btn btn-primary mx-1">Convert to Uppercase</button> */}
             </div >
-            <div className="container">
-                <h2>Your text summary</h2>
+            <div className="container d-flex flex-wrap flex-column  gap-2">
+                <h2 className='m-0'>Your text summary</h2>
 
-                <div className='mb-1 d-inline-block'>
+                <div className='mb-1'>
                     <div className="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" className="btn btn-danger"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 bi'>{words}</span>Words</button>
-                        <button type="button" className="btn btn-warning"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 '>{text.length}</span>Characters</button>
-                        <button type="button" className="btn btn-success"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 '>{lines}</span>Lines</button>
+                        <button type="button" className="btn btn-danger  "><span className='p-2 badge bg-dark rounded-circle text-center mx-1'>{words}</span>Words</button>
+                        <button type="button" className="btn btn-warning"><span className='p-2 badge bg-dark rounded-circle text-center mx-1'>{text.length}</span>Characters</button>
+                        <button type="button" className="btn btn-success"><span className='p-2 badge bg-dark rounded-circle text-center mx-1'>{lines}</span>Lines</button>
                     </div>
 
                 </div>
+                <div className='d-flex flex-row gap-2 flex-wrap align-self-lg-start w-50 bg-info  p-2 rounded-1 '>
+                    <i className='bi bi-card-heading'></i>
+                    <span className=' text'><strong>{words * 0.008} </strong>Minutes to read</span>
+                </div>
 
-                <p className='d-flex flex-wrap flex-row bg-info w-50 p-2 rounded-1 shadow-lg align-items-center '>{text.split(" ").length * 0.008} Minutes to read</p>
                 <h3>Preview</h3>
-                <p className='shadow-lg text-wrap text-secondary p-2 border'>{text}</p>
+                <p className='shadow-lg text-wrap text-secondary rounded-1'>{text}</p>
             </div>
         </>
 
