@@ -34,8 +34,7 @@ export default function TextForm(props) {
         setText(e.target.value)
     }
     const resetText = () => {
-        let newText = "";
-        setText(newText)
+        setText("")
     }
     let words = text.trimStart(" ").split(" ").length - 1;
     const countlines = (text) => {
@@ -87,7 +86,7 @@ export default function TextForm(props) {
                 </div>
 
                 <h3>Preview</h3>
-                <p className='shadow-lg text-wrap text-secondary rounded-1'>{text}</p>
+                <p className='shadow-lg text-wrap text-secondary rounded-1 p-2'>{text}</p>
             </div>
         </>
 

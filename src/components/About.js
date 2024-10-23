@@ -31,7 +31,7 @@ export default function About(props) {
     }
     return (
         <>
-            <div className="container rounded-1 pb-3 mb-1" style={myStyle}>
+            <div className="container rounded-2 pb-3 mb-1" style={myStyle}>
                 <div className="d-flex flex-row justify-content-between align-items-center p-1">
                     <h2 className="py-2">{props.about}</h2>
                     <button onClick={toggleStyle} className={btnclass}>
