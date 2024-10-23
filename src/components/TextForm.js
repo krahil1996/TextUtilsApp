@@ -68,17 +68,11 @@ export default function TextForm(props) {
             <div className="container">
                 <h2>Your text summary</h2>
 
-                <div className='d-flex flex-wrap gap-2 flex-row shadow-lg align-items-center justify-content-evenly text-light w-50 bg-danger rounded-1 p-1 mb-1'>
-                    <div className='p-1   '>
-                        <span className='p-2 badge bg-dark rounded-circle text-center'>{words}</span><p className='px-1 d-inline'>Words</p>
-                    </div>
-                    <span className='border-2 border-end border-secondary border-opacity-50 text-danger'>{"."}</span>
-                    <div className='p-1 '>
-                        <span className='p-2 badge bg-dark rounded-circle text-center '>{text.length}</span><p className='px-1 d-inline'>Characters</p>
-                    </div>
-                    <span className='border-2 border-end border-secondary border-opacity-50 text-danger'>{"."}</span>
-                    <div className='p-1 '>
-                        <span className='p-2 badge bg-dark rounded-circle text-center '>{lines}</span><p className='px-1 d-inline'>Lines</p>
+                <div className='mb-1 d-inline-block'>
+                    <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" className="btn btn-danger"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 bi'>{words}</span>Words</button>
+                        <button type="button" className="btn btn-warning"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 '>{text.length}</span>Characters</button>
+                        <button type="button" className="btn btn-success"><span className='p-2 badge bg-dark rounded-circle text-center mx-1 '>{lines}</span>Lines</button>
                     </div>
 
                 </div>
