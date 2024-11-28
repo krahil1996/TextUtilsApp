@@ -35,7 +35,7 @@ export default function About(props) {
                 <div className="d-flex flex-row justify-content-between align-items-center p-1">
                     <h2 className="py-2">{props.about}</h2>
                     <button onClick={toggleStyle} className={btnclass}>
-                        <span style={{ paddingRight: '5px' }} className="bi-moon "></span>{btnText}</button>
+                        <span style={{ paddingRight: '5px' }} className="bi bi-moon "></span>{btnText}</button>
                 </div>
 
                 <div className="accordion" id="accordionExample" >

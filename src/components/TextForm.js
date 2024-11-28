@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 
-
-
-
-
-
-
 export default function TextForm(props) {
     const [text, setText] = useState('');
     // text = "new text ", //wrong way to change state
@@ -33,7 +27,6 @@ export default function TextForm(props) {
     const handlecopyClick = () => {
         let textcopy = document.getElementById('myBox');
         textcopy.select();
-        // textcopy.setSelectionRang(0, 9999);
         navigator.clipboard.writeText(textcopy.value);
 
     }
@@ -69,7 +62,8 @@ export default function TextForm(props) {
                         placeholder='Enter Text here.'
                         className="form-control mb-2 text-wrap " style={{ resize: 'initial' }} id="myBox" rows="14"
                         onChange={handleOnChange}
-                        value={text} >
+                        value={text}
+                        spellCheck>
 
                     </textarea>
                     <button onClick={handleUpClick} className="btn btn-primary m-2"><span className='bi bi-alphabet-uppercase'></span> Convert to Uppercase</button>
